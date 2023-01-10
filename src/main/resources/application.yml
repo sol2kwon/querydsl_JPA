@@ -7,11 +7,13 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none #테이블이 만들어지면 update로 바꾸기 create , none
+      ddl-auto: create #테이블이 만들어지면 update로 바꾸기 create , none
     properties:
       hibernate:
         format_sql: true #To beautify or pretty print the SQL
         show_sql: true #show sql
+        spring.jpa.properties.hibernate.use_sql_comments: true #jpql 보기
+
 
 logging:
   level:
